@@ -19,6 +19,8 @@ body.appendChild(divInBody);
 const squareDiv = document.querySelectorAll('.square');
 
 function createDivs(n) {
+    n = Math.min(Math.max(parseInt(n), 1), 100);
+    console.log(n);
     for (let i = 0; i < n**2; i++) { //256
         const squareDiv = document.createElement('div');
         squareDiv.classList.add('square');

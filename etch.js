@@ -1,5 +1,20 @@
-// Adding lots of divs
+// Adding erase button in div
 const body = document.querySelector('body');
+
+const divForButton = document.createElement('div');
+
+divForButton.classList.add('btn-div');
+
+body.appendChild(divForButton);
+
+const button = document.createElement('button');
+
+button.classList.add('btn');
+button.textContent = "Erase"
+
+divForButton.appendChild(button);
+
+// Adding lots of divs
 const divInBody = document.createElement('div');
 
 divInBody.classList.add('container');
@@ -18,5 +33,13 @@ const squareDiv = document.querySelectorAll('.square');
 squareDiv.forEach((square) => {
     square.addEventListener('mouseover', () => {
         square.style.backgroundColor = "red";
+    });
+});
+
+// Adding functionality to button
+
+squareDiv.forEach((square) => {
+    button.addEventListener('click', () => {
+        square.style.backgroundColor = "bisque";
     });
 });

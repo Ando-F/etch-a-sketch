@@ -4,14 +4,15 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .container {
     display: flex;
-    flex: 1;
     flex-wrap: wrap;
     width: 320px;
     height: 320px;
+    margin-left: auto;
 }
 
 .square {
@@ -20,4 +21,8 @@ html, body {
     background-color: bisque;
     width: 20px;
     height: 20px;
+}
+
+.btn {
+    margin: 30px;
 }

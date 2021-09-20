@@ -21,11 +21,31 @@ divInBody.classList.add('container');
 
 body.appendChild(divInBody);
 
-for (let i = 0; i < 256; i++) { //256
-    const squareDiv = document.createElement('div');
-    squareDiv.classList.add('square');
-    divInBody.appendChild(squareDiv);
-}        
+
+
+function createDivs(n) {
+    for (let i = 0; i < n**2; i++) { //256
+        const squareDiv = document.createElement('div');
+        squareDiv.classList.add('square');
+        divInBody.appendChild(squareDiv);
+    };
+    const squareDiv = document.querySelectorAll('.square');
+
+    squareDiv.forEach((square) => {
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = "red";
+        });
+});
+}
+
+createDivs(16)
+
+button.addEventListener('click', () => {
+    while(divInBody.firstChild) {
+        divInBody.removeChild(divInBody.firstChild);
+    };
+    createDivs(prompt('number', ''))
+});
 
 // Changing background color on hover
 const squareDiv = document.querySelectorAll('.square');

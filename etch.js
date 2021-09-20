@@ -21,11 +21,11 @@ divInBody.classList.add('container');
 
 body.appendChild(divInBody);
 
-for (let i = 0; i < 256; i++) {
+for (let i = 0; i < 256; i++) { //256
     const squareDiv = document.createElement('div');
     squareDiv.classList.add('square');
     divInBody.appendChild(squareDiv);
-}
+}        
 
 // Changing background color on hover
 const squareDiv = document.querySelectorAll('.square');
@@ -37,7 +37,6 @@ squareDiv.forEach((square) => {
 });
 
 // Adding functionality to button
-
 squareDiv.forEach((square) => {
     button.addEventListener('click', () => {
         square.style.backgroundColor = "bisque";

@@ -1,4 +1,4 @@
-# etch-a-cketch
+# etch-a-sketch
 
 Project description on The Odin Project: https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project
 
